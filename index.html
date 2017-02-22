@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<script src="http://misc.360buyimg.com/jdf/lib/jquery-1.6.4.js?t=1510291434"></script>
+<script src="acode.js"></script>
+<link href="" rel="stylesheet">
+</head>
+<style>
+    .header-brand{width:100%;height:435px;}
+    .slider-head{width:100%;height:435px;position:relative;}
+    .slider-box{height:435px;width:100%;overflow:hidden;position:absolute;left:0;top:0;z-index:1;}
+    .slider-box a{width:1200px;position:absolute;left:50%;margin-left:-600px;top:0;height:435px;}
+    .slider-btn{width:150px;position:absolute;left:50%;margin-left:-50px;top:390px;text-align:center;z-index:3;}
+    .slider-btn a{display:inline-block;width:12px;height:12px;margin-right:12px;background:url(http://img13.360buyimg.com/cms/jfs/t1522/266/1317237880/2422/b12f/55c34b49N04c89c73.png) no-repeat -54px bottom;}
+    .slider-btn a.current{background-position:bottom left;}
+    .arrow-btn{position:absolute;left:50%;top:195px;width:32px;height:66px;overflow:hidden;background:url(http://img14.360buyimg.com/cms/jfs/t2299/43/1436451063/2949/5dc53bcd/56a04e44N21b6eb40.png) no-repeat 0 0;z-index:4;}
+    .prev{margin-left:-600px;}
+    .next{margin-left:568px;background-position:right top;}
+</style>
+<body>
+
+  <p id="time"></p>
+    <div class="header-brand">
+        <div class="slider-head">
+            <div class="slider-box" data-color="#f39800">
+                <a clstag="" href="" target="_blank">
+                    <img src="http://img13.360buyimg.com/cms/jfs/t2017/113/2106592513/95535/e21e6071/569eff1bN84adb4f9.jpg"></a>
+            </div>
+
+            <div class="slider-box" data-color="#5aa1e3">
+                <a clstag="" href=" " target="_blank">
+                    <img src="http://img11.360buyimg.com/cms/jfs/t2086/361/2086602042/106935/d9836cc6/569eff1bNc1c5ed52.jpg"></a>
+            </div>
+
+            <div class="slider-box" data-color="#000000">
+                <a clstag="" href=" " target="_blank">
+                    <img src="http://img13.360buyimg.com/cms/jfs/t1843/171/2032599301/82284/1e054483/569f05d2Nfc8b24b4.jpg"></a>
+            </div>
+
+            <div class="slider-box" data-color="#484073">
+                <a clstag="" href=" " target="_blank">
+                    <img src="http://img11.360buyimg.com/cms/jfs/t2551/314/335783008/181645/7cb025f2/56431bdeNe31d3a24.jpg"></a>
+            </div>
+        </div>
+        <div class="slider-btn">
+            <a href='#nl'></a>
+            <a href="#nl" class="current"></a>
+
+            <a href="#nl" class=""></a>
+
+            <a href="#nl" class=""></a>
+        </div>
+        <a href="#nl" class="arrow-btn prev" style="display: none;"></a>
+        <a href="#nl" class="arrow-btn next" style="display: none;"></a>
+    </div>
+    <script>
+        $.acode.lunbo({
+                sliderWrap:$('.header-brand'),
+                sliderBox:$('.slider-box'),
+                sliderBtn:$('.slider-btn a')
+        });
+        $.acode.timeCount({
+            targetDay: '2017,11,18 15:00',
+            sprite: '#time',
+            end: function () {
+                console.log('倒计时结束');
+            }
+        })
+
+    </script>
+</body>
+</html>
